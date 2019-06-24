@@ -99,3 +99,6 @@ TW_INCLUDE_FUSE_EXFAT := true
 
 # NTFS Support
 TW_INCLUDE_FUSE_NTFS := true
+
+#PB OFFICIAL
+PB_OFFICIAL := true

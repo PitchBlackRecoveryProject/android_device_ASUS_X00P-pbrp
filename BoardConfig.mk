@@ -107,3 +107,6 @@ TW_INCLUDE_FUSE_EXFAT := true
 
 # NTFS Support
 TW_INCLUDE_FUSE_NTFS := true
+
+#PitchBlack OFFICIAL
+PB_OFFICIAL := true

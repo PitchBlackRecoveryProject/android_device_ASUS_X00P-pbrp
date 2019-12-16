@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/asus/X00PD
+LOCAL_PATH := device/asus/X00P
 
 # Architecture
 TARGET_ARCH := arm64
@@ -48,7 +48,9 @@ TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/zImage
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
+TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
 PLATFORM_SECURITY_PATCH := 2029-10-01
+PLATFORM_VERSION := 9
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
@@ -64,6 +66,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_VENDORIMAGE_PARTITION_SIZE := 649867264
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -90,6 +93,11 @@ RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_EXCLUDE_TWRPAPP := true
 TW_HAS_EDL_MODE := true
+TW_USE_TOOLBOX := true
+
+# Debug
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
 
 # Disable Mouse Cursor
 TW_INPUT_BLACKLIST := "hbtp_vm"
@@ -99,6 +107,3 @@ TW_INCLUDE_FUSE_EXFAT := true
 
 # NTFS Support
 TW_INCLUDE_FUSE_NTFS := true
-
-#PB OFFICIAL
-PB_OFFICIAL := true

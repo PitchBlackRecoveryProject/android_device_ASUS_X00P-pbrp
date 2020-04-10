@@ -17,8 +17,8 @@
 # Inherit Target Product stuff
 $(call inherit-product, build/target/product/embedded.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Inherit some common PitchBlack stuff.
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Charger
 PRODUCT_PACKAGES += \

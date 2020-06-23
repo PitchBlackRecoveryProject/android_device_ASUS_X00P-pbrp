@@ -103,6 +103,7 @@ TW_EXCLUDE_TWRPAPP := true
 TW_HAS_EDL_MODE := true
 TW_FORCE_USE_BUSYBOX := true
 PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
+PB_DISABLE_DEFAULT_DM_VERITY := true
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true

@@ -11,8 +11,11 @@ jobs:
       CODENAME: 'X00P'
       FLAVOR: 'eng'
       PB_OFFICIAL: 'true'
+      MAINTAINER_FULL_NAME: 'MD Raza'
+      DEVICE_RELEASE_NAME: 'ASUS ZenFone Max M1'
+      EXTRA_CMD: "rm -rf vendor/pb && git clone -b pb-3.0 https://github.com/PitchBlackRecoveryProject-Devices/vendor_pb vendor/pb"
       CHANGELOG: |
-        - Disable Treble Compatibility Check By Default
+        - Delete it plox
     working_directory: /home/builder/pitchblack
     steps:
       - run:

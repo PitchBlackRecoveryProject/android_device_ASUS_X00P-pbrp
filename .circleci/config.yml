@@ -19,7 +19,7 @@ jobs:
       - run:
           name: AIO Build
           command: |
-            wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_pb/pb/build.sh
+            wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject-Devices/vendor_pb/pb-3.0/build.sh
             source build.sh
 workflows:
   version: 2.1

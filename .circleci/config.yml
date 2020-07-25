@@ -7,7 +7,7 @@ jobs:
       MANIFEST_BRANCH: 'android-9.0'
       VERSION: '2.9.1'
       MAINTAINER: '@raza231198'
-      VENDOR: 'asus'
+      VENDOR: 'ASUS'
       CODENAME: 'X00P'
       FLAVOR: 'eng'
       PB_OFFICIAL: 'true'

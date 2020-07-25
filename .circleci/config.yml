@@ -11,7 +11,6 @@ jobs:
       CODENAME: 'X00P'
       FLAVOR: 'eng'
       PB_OFFICIAL: 'true'
-      EXTRA_CMD: "rm -rf vendor/pb && git clone -b pb-3.0 https://github.com/PitchBlackRecoveryProject/vendor_pb vendor/pb"
       CHANGELOG: |
         - Delete it plox
     working_directory: /home/builder/pitchblack
@@ -19,7 +18,7 @@ jobs:
       - run:
           name: AIO Build
           command: |
-            wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_utils/pb-3.0/build.sh
+            wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_utils/pb/build.sh
             source build.sh
 workflows:
   version: 2.1

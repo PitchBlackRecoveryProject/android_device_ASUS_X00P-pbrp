@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/asus/X00P
+LOCAL_PATH := device/ASUS/X00P
 
 # Architecture
 TARGET_ARCH := arm64

@@ -10,7 +10,7 @@ jobs:
       VENDOR: 'ASUS'
       CODENAME: 'X00P'
       FLAVOR: 'eng'
-      PB_OFFICIAL: 'true'
+      TEST_BUILD: 'true'
       CHANGELOG: |
         - Bringup 3.0 
         - Source side changes 
@@ -24,6 +24,7 @@ jobs:
       - run:
           name: AIO Build
           command: |
+            echo -e "machine github.com\n  login $GITHUB_TOKEN" > ~/.netrc
             wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_utils/pb/build.sh
             source build.sh
 workflows:

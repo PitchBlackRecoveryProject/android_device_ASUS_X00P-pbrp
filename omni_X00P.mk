@@ -15,7 +15,7 @@
 #
 
 # Inherit Target Product stuff
-$(call inherit-product, build/target/product/embedded.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 
 # Inherit some common PitchBlack stuff.
 $(call inherit-product, vendor/pb/config/common.mk)
@@ -27,6 +27,8 @@ PRODUCT_PACKAGES += \
 # Encryption
 PRODUCT_PACKAGES += \
     libcryptfs_hw
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/ASUS/X00P/recovery/root,recovery/root)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := X00P

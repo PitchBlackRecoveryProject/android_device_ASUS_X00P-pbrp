@@ -14,10 +14,10 @@ jobs:
       VENDOR: 'ASUS'
       CODENAME: 'X00P'
       FLAVOR: 'eng'
-      TEST_BUILD: 'true'
+      PB_OFFICIAL: 'true'
       MAINTAINER: '@raza231198'
       CHANGELOG: |
-        - Test
+        - Add Support To Flash Persist IMG
     working_directory: /home/builder/pitchblack
     steps:
       - run:

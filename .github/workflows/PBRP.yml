@@ -40,7 +40,7 @@ jobs:
               sudo apt-get update && sudo apt-get install sshpass -y
               export CIRCLE_SHA1=$GITHUB_SHA
               cd $BuildPath 
-              [[ ${{ BUILD_RELEASE_TYPE }} == "TEST" ]] && export TEST_BUILD=true
-              [[ ${{ BUILD_RELEASE_TYPE }} == "BETA" ]] && export BETA_BUILD=true
-              [[ ${{ BUILD_RELEASE_TYPE }} == "OFFICIAL" ]] && export PB_OFFICIAL=true
+              [[ ${BUILD_RELEASE_TYPE} == "TEST" ]] && export TEST_BUILD=true
+              [[ ${BUILD_RELEASE_TYPE} == "BETA" ]] && export BETA_BUILD=true
+              [[ ${BUILD_RELEASE_TYPE} == "OFFICIAL" ]] && export PB_OFFICIAL=true
               bash vendor/utils/pb_deploy.sh ${BUILD_RELEASE_TYPE} ${VENDOR} ${CODENAME}

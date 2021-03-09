@@ -34,9 +34,9 @@ jobs:
 
        - name: Export Vars
          run: |
-              if [[ ${BUILD_RELEASE_TYPE} == "TEST" ]]; then export TEST_BUILD=true ;fi
-              if [[ ${BUILD_RELEASE_TYPE} == "BETA" ]]; then export BETA_BUILD=true ;fi
-              if [[ ${BUILD_RELEASE_TYPE} == "OFFICIAL" ]]; then export PB_OFFICIAL=true ;fi
+              if [[ ${BUILD_RELEASE_TYPE} == "TEST" ]]; then echo "TEST_BUILD=true"  >> $GITHUB_ENV;fi
+              if [[ ${BUILD_RELEASE_TYPE} == "BETA" ]]; then echo "BETA_BUILD=true"  >> $GITHUB_ENV;fi
+              if [[ ${BUILD_RELEASE_TYPE} == "OFFICIAL" ]]; then echo "PB_OFFICIAL=true"  >> $GITHUB_ENV;fi
 
        - name: Recovery Compilation
          uses: Carbonatedblack/Recovery-Compiler@beta

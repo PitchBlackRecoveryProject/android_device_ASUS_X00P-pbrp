@@ -38,6 +38,14 @@ jobs:
               if [[ ${BUILD_RELEASE_TYPE} == "BETA" ]]; then echo "BETA_BUILD=true"  >> $GITHUB_ENV;fi
               if [[ ${BUILD_RELEASE_TYPE} == "OFFICIAL" ]]; then echo "PB_OFFICIAL=true"  >> $GITHUB_ENV;fi
 
+         env:
+           CHANGELOG: |
+             Test
+             Test 2
+             Yess5
+           MAINTAINER: |
+              @raza231198
+
        - name: Recovery Compilation
          uses: Carbonatedblack/Recovery-Compiler@beta
        

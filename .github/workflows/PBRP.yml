@@ -6,11 +6,16 @@ on:
         description: 'Deploy Type (TEST/BETA/OFFICIAL)'
         required: true
         default: 'TEST'
+      ChangeLogs:
+        description: 'Build ChangeLogs'
+        required: true
+        default: 'Sync Latest Source'
   watch:
     types: [started]
 
 env:
   BUILD_RELEASE_TYPE: ${{ github.event.inputs.DEPLOY_TYPE }}
+  CHANGELOG: ${{ github.event.inputs.ChangeLogs }}
   BOT_API: ${{ secrets.BOT_API }}
   GCF_AUTH_KEY: ${{ secrets.GCF_AUTH_KEY }}
   GH_BOT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -37,16 +42,6 @@ jobs:
               if [[ ${BUILD_RELEASE_TYPE} == "TEST" ]]; then echo "TEST_BUILD=true"  >> $GITHUB_ENV;fi
               if [[ ${BUILD_RELEASE_TYPE} == "BETA" ]]; then echo "BETA_BUILD=true"  >> $GITHUB_ENV;fi
               if [[ ${BUILD_RELEASE_TYPE} == "OFFICIAL" ]]; then echo "PB_OFFICIAL=true"  >> $GITHUB_ENV;fi
-              echo "$CHANGELOG" >> $GITHUB_ENV
-              echo "$MAINTAINER" >> $GITHUB_ENV
-
-         env:
-           CHANGELOG: |
-             Test
-             Test 2
-             Yess5
-           MAINTAINER: |
-              @raza231198
 
        - name: Recovery Compilation
          uses: Carbonatedblack/Recovery-Compiler@beta

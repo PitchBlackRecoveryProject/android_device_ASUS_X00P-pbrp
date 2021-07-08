@@ -1,18 +1,18 @@
-service set-old-build /sbin/set-old-build.sh
+service set-old-build /system/bin/set-old-build.sh
     user root
     group root
     disabled
     oneshot
     seclabel u:r:recovery:s0
 
-service set-product-carrier /sbin/set-product-carrier.sh
+service set-product-carrier /system/bin/set-product-carrier.sh
     user root
     group root
     disabled
     oneshot
     seclabel u:r:recovery:s0
 
-service set-product-board /sbin/set-product-board.sh
+service set-product-board /system/bin/set-product-board.sh
     user root
     group root
     disabled

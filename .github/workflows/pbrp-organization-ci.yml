@@ -22,7 +22,7 @@ env:
   GitHubName: ${{ secrets.GitHubName }}
   SFPassword: ${{ secrets.SFPassword }}
   SFUserName: ${{ secrets.SFUserName }}
-  #TARGET: "define this if your target is not recoveryimage"
+  TARGET: "pbrp"
   #EXTRA_CMD: "Extra Commands Here"
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
 
        - name: Auto Adapt Manifest
          run: |
-              echo "MANIFEST=https://pbrp-bot:$GH_SECRET_TOKEN@github.com/PitchBlackRecoveryProject/manifest -b ${GITHUB_REF##*/}" >> $GITHUB_ENV
+              echo "MANIFEST=https://github.com/PitchBlackRecoveryDevices/manifest_pb -b ${GITHUB_REF##*/}" >> $GITHUB_ENV
 
        - name: Export Vars
          run: |

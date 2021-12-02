@@ -45,9 +45,15 @@ jobs:
               git config --global user.name pbrp-bot
               echo "machine github.com login $GH_SECRET_TOKEN password x-oauth-basic" > $HOME/.netrc
 
+       - name: Checkout Recovery Compiler Repo
+         uses: actions/checkout@v2
+         with:
+           repository: PitchBlackRecoveryProject/backup
+           ref: production
+           token: ${{ secrets.GH_BOT_TOKEN }}
+           path: .github/actions/Recovery-Compiler
        - name: Recovery Compilation
-         uses: PitchBlackRecoveryProject/backup@production
-         token: ${{ secrets.GH_BOT_TOKEN }}
+         uses: ./.github/actions/Recovery-Compiler
 
        - name: Release Builds 
          run: |

@@ -54,8 +54,6 @@ TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/zImage
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
 # Encryption
-TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
-TARGET_HW_DISK_ENCRYPTION := true
 PLATFORM_SECURITY_PATCH := 2029-10-01
 PLATFORM_VERSION := 16.1.0
 

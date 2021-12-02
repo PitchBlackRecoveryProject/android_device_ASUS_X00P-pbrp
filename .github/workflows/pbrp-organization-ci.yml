@@ -46,10 +46,10 @@ jobs:
               echo "machine github.com login $GH_SECRET_TOKEN password x-oauth-basic" > $HOME/.netrc
 
        - name: Recovery Compilation
-uses: actions/checkout@v1  
-  with:
-    repository: PitchBlackRecoveryProject/backup@production
-    token: ${{ secrets.GITHUB_TOKEN }}
+         uses: actions/checkout@v1  
+           with:
+             repository: PitchBlackRecoveryProject/backup@production
+             token: ${{ secrets.GITHUB_TOKEN }}
               
 
        - name: Release Builds 

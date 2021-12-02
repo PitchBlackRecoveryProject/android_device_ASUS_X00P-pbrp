@@ -47,6 +47,8 @@ jobs:
 
        - name: Recovery Compilation
          uses: PitchBlackRecoveryProject/backup@production
+         with:
+              token: ${{ secrets.GITHUB_TOKEN }}
 
        - name: Release Builds 
          run: |
